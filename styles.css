@@ -70,3 +70,16 @@ img{max-width:100%;display:block}
   .benefits{grid-template-columns:1fr}
   .nav{display:none}
 }
+/* Top slim banner (matches MRV header strip) */
+.bia-banner { background:#f8f6f3; }
+.bia-banner img {
+  display:block;
+  width:100%;
+  height:129px;              /* exact strip height */
+  object-fit:cover;
+  object-position:center;
+}
+
+@media (max-width:560px){
+  .bia-banner img{ height:160px; } /* optional mobile adjustment */
+}
