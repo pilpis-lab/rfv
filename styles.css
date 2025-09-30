@@ -1,0 +1,72 @@
+
+:root{
+  --green:#0C5C40;
+  --orange:#F39A1F;
+  --bg:#f2f4f4;
+  --ink:#1e1f22;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);}
+img{max-width:100%;display:block}
+.container{width:min(1140px,92vw);margin-inline:auto}
+.btn{display:inline-block;padding:.9rem 1.1rem;border-radius:.6rem;text-decoration:none;font-weight:700;transition:.2s}
+.btn.primary{background:var(--orange);color:#fff}
+.btn.outline{border:2px solid var(--green);color:var(--green);background:transparent}
+.btn.cta{background:var(--green);color:#fff}
+.btn.whatsapp{background:#25D366;color:#fff}
+
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e8e8;z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0}
+.logo{height:48px;width:auto}
+.nav{display:flex;gap:1rem}
+.nav-link{color:var(--ink);text-decoration:none;font-weight:600;opacity:.8}
+.nav-link:hover{opacity:1}
+
+.hero{position:relative;background:var(--bg);overflow:hidden}
+.hero-bg img{width:100%;height:380px;object-fit:cover;filter:contrast(1) saturate(1.05)}
+.hero-content{position:relative;margin-top:-220px;padding:0 0 2.25rem}
+.hero h1{font-size:clamp(1.6rem,3.2vw,2.2rem);line-height:1.2;margin:0 0 .6rem}
+.lead{opacity:.9;margin:0 0 1rem}
+.benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem 2rem;margin:0 0 1rem;padding-left:1rem}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap}
+
+.steps{padding:2.5rem 0;background:#fff}
+.steps h2{font-size:clamp(1.6rem,3vw,2rem);margin:0}
+.steps .sub{opacity:.8;margin:.25rem 0 1.25rem}
+.brand-word{color:var(--green)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:#f9fbfb;border:1px solid #e6eeee;border-radius:16px;padding:1rem}
+.card h3{margin:.5rem 0 .25rem;font-size:1.05rem}
+.card p{margin:0 0 .25rem;opacity:.9}
+
+.after-steps{display:grid;grid-template-columns:280px 1fr;align-items:center;gap:1.25rem;margin-top:1.25rem}
+.after-steps .copy h3{margin:.25rem 0}
+
+.income{padding:2.5rem 0;background:var(--bg)}
+.income-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem;align-items:center}
+.income .sub{opacity:.8}
+.checks{list-style:none;padding:0;margin:1rem 0;display:grid;gap:.4rem}
+.checks li::before{content:"✓";color:var(--green);font-weight:800;margin-right:.5rem}
+.income-art img{max-height:260px;margin-left:auto}
+
+.faq{padding:2.5rem 0;background:#fff}
+.faq h2{margin-top:0}
+.faq-list details{border:1px solid #e6eeee;border-radius:12px;padding:.8rem 1rem;margin:.5rem 0;background:#f9fbfb}
+.faq-list summary{cursor:pointer;font-weight:700;color:var(--green)}
+.faq-list p{margin:.5rem 0 0;opacity:.9}
+
+.site-footer{background:#fff;border-top:1px solid #e5e8e8}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;gap:.75rem;flex-wrap:wrap}
+
+@media (max-width: 960px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .after-steps{grid-template-columns:1fr}
+  .income-inner{grid-template-columns:1fr}
+  .hero-bg img{height:280px}
+  .hero-content{margin-top:-170px}
+}
+@media (max-width: 560px){
+  .cards{grid-template-columns:1fr}
+  .benefits{grid-template-columns:1fr}
+  .nav{display:none}
+}
