@@ -6,11 +6,17 @@
   <title>Saia do Aluguel — RFV</title>
   <meta name="description" content="Já pensou em sair do aluguel e conquistar a casa própria? Descubra como a RFV pode te ajudar a financiar seu primeiro imóvel." />
   <meta name="theme-color" content="#0C5C40" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <!-- Preload the hero for faster LCP -->
-  <link rel="preload" as="image" href="images/hero-desktop-1.webp" imagesrcset="images/hero-desktop-1.webp" imagesizes="100vw" />
+  <link rel="preload" as="image"
+        href="images/hero-desktop-1.webp"
+        imagesrcset="images/hero-desktop-1.webp"
+        imagesizes="100vw" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -23,7 +29,13 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#" aria-label="Início">
-        <img src="images/logo.flat.png" alt="RFV" class="logo" loading="eager" decoding="async" fetchpriority="high">
+        <img
+          src="images/logo.flat.png"
+          alt="RFV"
+          class="logo"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high">
       </a>
 
       <nav class="nav" aria-label="Primária">
@@ -34,7 +46,7 @@
 
       <a class="btn cta" href="#" role="button">Quero fazer uma simulação</a>
 
-      <!-- WhatsApp (mobile only) -->
+      <!-- WhatsApp (mobile only; decorative glyph) -->
       <a class="wa-icon" href="#" aria-label="Abrir WhatsApp">
         <img src="images/Digital_Glyph_Green.svg" alt="" width="28" height="28" aria-hidden="true">
       </a>
@@ -46,8 +58,13 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-bg">
         <picture>
-          <!-- (optional future) <source media="(max-width:560px)" srcset="images/hero-mobile.webp" /> -->
-          <img src="images/hero-desktop-1.webp" alt="Família feliz comemorando a conquista do primeiro lar" fetchpriority="high">
+          <!-- Reserve a mobile source later if you create one
+          <source media="(max-width:560px)" srcset="images/hero-mobile.webp" />
+          -->
+          <img
+            src="images/hero-desktop-1.webp"
+            alt="Família feliz comemorando a conquista do primeiro lar"
+            fetchpriority="high">
         </picture>
       </div>
 
@@ -77,7 +94,7 @@
       </div>
     </section>
 
-    <!-- Passos -->
+    <!-- Passos (green band) -->
     <section id="passos" class="steps" aria-labelledby="steps-title">
       <div class="container">
         <h2 id="steps-title">Quer sair do aluguel, a <span class="brand-word">RFV</span> te ajuda!</h2>
@@ -161,7 +178,7 @@
             <summary>1. Qual a vantagem de financiar apartamento?</summary>
             <p>Além da segurança de contar com um imóvel como um bem durável, o financiamento é uma das modalidades que mais proporciona a realização do sonho da casa própria com taxas reduzidas. O financiamento facilita esse caminho.</p>
           </details>
-          <!-- ... demais detalhes ... -->
+          <!-- … demais detalhes … -->
         </div>
       </div>
     </section>
