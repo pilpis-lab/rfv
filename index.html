@@ -20,26 +20,14 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#" aria-label="Início">
-        <!-- Inline RFV logo -->
-        <svg class="logo" viewBox="0 0 560 220" aria-label="RFV logo" role="img">
-          <defs>
-            <linearGradient id="g1" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stop-color="#27A867"/>
-              <stop offset="100%" stop-color="#1F7E4F"/>
-            </linearGradient>
-            <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stop-color="#FF9C1A"/>
-              <stop offset="100%" stop-color="#FFB84D"/>
-            </linearGradient>
-          </defs>
-          <g transform="translate(0,10) scale(0.9)">
-            <path d="M30,130 L110,50 L190,130" fill="none" stroke="url(#g1)" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M30,210 L110,130 L190,210" fill="none" stroke="url(#g2)" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-          <g transform="translate(220,160)">
-            <text x="0" y="0" font-family="Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="120" font-weight="800" fill="#0C5C40" letter-spacing="3">RFV</text>
-          </g>
-        </svg>
+        <img
+          src="images/logo.png"
+          alt="RFV"
+          class="logo"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
       </a>
 
       <nav class="nav" aria-label="Primária">
@@ -165,7 +153,6 @@
     <div class="container">
       <h2>Dúvidas frequentes</h2>
       <div class="faq-list">
-        <!-- detalhes mantidos -->
         <details>
           <summary>1. Qual a vantagem de financiar apartamento?</summary>
           <p>Além da segurança de contar com um imóvel como um bem durável, o financiamento é uma das modalidades que mais proporciona a realização do sonho da casa própria com taxas reduzidas. O financiamento facilita esse caminho.</p>
