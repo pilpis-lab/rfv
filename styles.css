@@ -172,5 +172,19 @@ img{max-width:100%;display:block}
     line-height:1.15;
     margin-top:.25rem;
     margin-bottom:.6rem;
+/* hidden by default (desktop/tablet) */
+.hero-illus{ display:none; }
+
+/* mobile: show illustration right under the title */
+@media (max-width:560px){
+  .hero-illus{
+    display:block;
+    width:min(520px, 88vw);
+    margin:.35rem auto 1rem;   /* close to the H1, like reference */
+  }
+  /* slightly tighter spacing above the paragraph */
+  .hero-content{ padding: .75rem 0 1.6rem; }
+  .lead{ margin-top:.25rem; }
+}
   }
 }
