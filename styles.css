@@ -75,7 +75,7 @@ img{max-width:100%;display:block}
   .hero-content{margin-top:-170px}
 }
 
-/* Top slim banner (matches MRV header strip) */
+/* Top slim banner (desktop only strip) */
 .bia-banner { background:#f8f6f3; }
 .bia-banner img {
   display:block;
@@ -98,8 +98,15 @@ img{max-width:100%;display:block}
   .site-header{border-bottom:none}
   .header-inner{padding:.5rem 0}
 
-  /* hide the desktop banner entirely on mobile */
-  .bia-banner{display:none !important}
+  /* HARD-HIDE the desktop banner on mobile */
+  .bia-banner,
+  .bia-banner img{
+    display:none !important;
+    height:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+    overflow:hidden !important;
+  }
 
   /* hero image + overlay title (like reference) */
   .hero-bg img{height:340px;object-fit:cover}
