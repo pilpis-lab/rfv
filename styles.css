@@ -134,7 +134,7 @@ img{max-width:100%;display:block}
   .hero-bg img{
     height:500px;               /* taller mobile hero (was 460px) */
     object-fit:cover;
-    object-position:100% 50%;    /* more to the left & a bit higher */
+    object-position:50% 50%;    /* more to the left & a bit higher */
   }
 
   /* move gradient to the image container so it doesn't cover content */
