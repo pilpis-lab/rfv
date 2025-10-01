@@ -132,7 +132,7 @@ img{max-width:100%;display:block}
     position:relative;          /* for gradient pseudo-element */
   }
   .hero-bg img{
-    height:500px;               /* taller mobile hero (was 460px) */
+    height:550px;               /* taller mobile hero (was 460px) */
     object-fit:cover;
     object-position:80% 28%;    /* more to the left & a bit higher */
   }
