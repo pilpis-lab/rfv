@@ -38,7 +38,7 @@ img{max-width:100%;display:block}
   width:100%;
   height:420px;                 /* taller desktop hero */
   object-fit:cover;
-  object-position:50% 25%;      /* show a bit more of the top area */
+  object-position:40% 25%;      /* nudge framing to the left */
   filter:contrast(1) saturate(1.05);
 }
 .hero-content{position:relative;margin-top:-220px;padding:0 0 2.25rem}
@@ -85,7 +85,7 @@ img{max-width:100%;display:block}
   .cards{grid-template-columns:repeat(2,1fr)}
   .after-steps{grid-template-columns:1fr}
   .income-inner{grid-template-columns:1fr}
-  .hero-bg img{height:320px}      /* was 280px */
+  .hero-bg img{height:320px}
   .hero-content{margin-top:-170px}
 }
 
@@ -108,7 +108,7 @@ img{max-width:100%;display:block}
   .nav{display:none !important}
   .cta{display:none !important}
   .wa-icon{display:flex;align-items:center;justify-content:center;padding:.25rem;margin-left:auto;-webkit-tap-highlight-color:transparent}
-  .logo{height:48px}            /* smaller mobile logo (was 72px) */
+  .logo{height:48px}            /* smaller mobile logo */
   .site-header{border-bottom:none}
   .header-inner{padding:.5rem 0}
 
@@ -122,27 +122,49 @@ img{max-width:100%;display:block}
     overflow:hidden !important;
   }
 
-  /* hero image & overlay on mobile */
+  /* --- HERO: lock overlay to image using grid --- */
+  .hero{
+    display:grid;               /* image + overlay share row 1; content row 2 */
+    overflow:hidden;
+  }
+  .hero-bg{
+    grid-area:1 / 1;
+    position:relative;          /* for gradient pseudo-element */
+  }
   .hero-bg img{
     height:460px;               /* taller mobile hero */
     object-fit:cover;
-    object-position:50% 30%;    /* adjust visible area */
+    object-position:40% 30%;    /* more to the left on mobile too */
   }
-  .hero::after{
+  /* move gradient to the image container so it doesn't cover content */
+  .hero::after{ content:none; }
+  .hero-bg::after{
     content:"";
     position:absolute; inset:0;
     background:linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.45) 95%);
     pointer-events:none;
-    z-index:1;                  /* gradient below text */
+    z-index:1;                  /* above image, below title */
   }
+
+  /* overlay title sits on the image layer */
   .hero-kicker{
+    grid-area:1 / 1;
+    align-self:end;
+    justify-self:start;
+    margin:0 0 18px 16px;
+    position:relative;
+    z-index:2;                  /* above image + gradient */
     display:block;
-    position:absolute; left:16px; bottom:18px;
     color:#fff; font-weight:800; text-transform:uppercase; letter-spacing:.02em;
     font-size:clamp(22px,7vw,34px);
     text-shadow:0 2px 8px rgba(0,0,0,.35);
-    z-index:2;                  /* ensure above image & gradient */
   }
-  .hero-content{margin-top:0; padding:1rem 0 1.5rem} /* rest of text below image */
+
+  /* rest of hero content stays below image */
+  .hero-content{
+    grid-area:2 / 1;
+    margin-top:0;
+    padding:1rem 0 1.5rem;
+  }
   .hero h1{font-size:1.5rem; line-height:1.25}
 }
