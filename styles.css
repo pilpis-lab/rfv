@@ -38,7 +38,7 @@ img{max-width:100%;display:block}
   width:100%;
   height:420px;                 /* taller desktop hero */
   object-fit:cover;
-  object-position:40% 25%;      /* nudge framing to the left */
+  object-position:35% 25%;      /* nudge framing to the left */
   filter:contrast(1) saturate(1.05);
 }
 .hero-content{position:relative;margin-top:-220px;padding:0 0 2.25rem}
