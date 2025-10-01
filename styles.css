@@ -132,9 +132,12 @@ img{max-width:100%;display:block}
     position:relative;          /* for gradient pseudo-element */
   }
   .hero-bg img{
-    height:500px;               /* taller mobile hero (was 460px) */
-    object-fit:cover;
-    object-position:75% 50%;    /* more to the left & a bit higher */
+    height: 500px;       /* your desired full hero height */
+    width: auto;         /* don't force to 100% width */
+    max-width: none;     /* allow overflow horizontally */
+    object-fit: cover;   /* fills height, crop only sides */
+    object-position: center center; /* adjust framing if needed */
+}
   }
 
   /* move gradient to the image container so it doesn't cover content */
