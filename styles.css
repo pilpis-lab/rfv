@@ -61,27 +61,65 @@ img{ max-width:100%; display:block }
   gap:.5rem 2rem; margin:0 0 1rem; padding-left:1rem;
 }
 .hero-cta{ display:flex; gap:.75rem; flex-wrap:wrap }
-/* hide the optional illustration by default; shown on mobile */
+/* optional illustration (hidden desktop/tablet; shown on mobile) */
 .hero-illus{ display:none }
 
 /* ========== Steps (green band) ========== */
-.steps{ padding:2.5rem 0; background:var(--green) }
-.steps h2{ font-size:clamp(1.6rem,3vw,2rem); margin:0; color:#fff }
-.steps .sub{ margin:.25rem 0 1.25rem; color:#fff; opacity:.95 }
-.brand-word{ color:#fff }
-.cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem }
-.card{
-  background:#fff; border:1px solid #e2e8e6; border-radius:18px;
-  padding:1rem; box-shadow:0 8px 18px rgba(0,0,0,.05);
+.steps{
+  padding:2.5rem 0;
+  background:var(--green);
+  color:#fff;
 }
-.card h3{ margin:.5rem 0 .25rem; font-size:1.05rem }
-.card p{ margin:0 0 .25rem; opacity:.9 }
+.steps .container{ padding-inline:clamp(12px,3vw,0) } /* subtle mobile insets */
+.steps h2{
+  font-size:clamp(1.6rem,5.6vw,2.1rem);
+  line-height:1.15; letter-spacing:.2px;
+  margin:0 0 .5rem; color:#fff; font-weight:800;
+}
+.steps .sub{ margin:.25rem 0 1.25rem; color:#fff; opacity:.98 }
+.brand-word{ color:#fff }
+
+/* Grid + auto-numbered cards */
+.cards{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem;
+  counter-reset:step;
+}
+.card{
+  position:relative;
+  background:#fff; color:var(--ink);
+  border:1px solid #e2e8e6; border-radius:20px;
+  padding:1.05rem .95rem 1.15rem;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+.card > img{ display:none !important } /* we use the badge instead */
+
+.card::before{
+  content:counter(step);
+  counter-increment:step;
+  position:absolute; left:18px; top:16px;
+  display:inline-grid; place-items:center;
+  width:58px; height:58px; border-radius:14px;
+  background:var(--green); color:#fff; font-weight:800; font-size:1.35rem;
+  box-shadow:0 3px 10px rgba(0,0,0,.12);
+}
+.card h3{
+  margin:.35rem 0 .35rem;
+  font-size:clamp(1.05rem,3.8vw,1.2rem);
+  line-height:1.25; font-weight:800;
+  margin-left:calc(58px + 18px + 10px);
+}
+.card p{
+  margin:0; opacity:.9;
+  font-size:clamp(.98rem,3.4vw,1.02rem); line-height:1.5;
+  margin-left:calc(58px + 18px + 10px);
+}
 
 /* ========== After steps ========== */
 .after-steps{
   display:grid; grid-template-columns:280px 1fr; align-items:center;
   gap:1.25rem; margin-top:1.25rem;
 }
+.after-steps img{ border-radius:14px }
 .after-steps .copy h3{ margin:.25rem 0 }
 
 /* ========== Income ========== */
@@ -167,7 +205,7 @@ img{ max-width:100%; display:block }
     margin:.4rem auto 1.1rem;
   }
 
-  /* single CTA after bullets (match reference) */
+  /* single CTA after bullets */
   .hero-cta .btn.outline{ display:none !important }
   .hero-cta .btn.primary{
     background:var(--green) !important;
@@ -175,7 +213,13 @@ img{ max-width:100%; display:block }
     padding:1.05rem 1.25rem; border-radius:14px; font-size:1.05rem;
   }
 
-  /* cards grid & benefits list */
-  .cards{ grid-template-columns:1fr }
+  /* steps cards + badge tweaks */
+  .cards{ grid-template-columns:1fr; gap:.9rem }
+  .card{ border-radius:18px; padding:1rem .9rem 1.05rem }
+  .card::before{
+    left:16px; top:14px; width:52px; height:52px; border-radius:12px; font-size:1.2rem;
+  }
+  .card h3, .card p{ margin-left:calc(52px + 16px + 10px) }
+
   .benefits{ grid-template-columns:1fr }
 }
