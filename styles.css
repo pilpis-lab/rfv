@@ -38,7 +38,7 @@ img{max-width:100%;display:block}
   width:100%;
   height:420px;                 /* taller desktop hero */
   object-fit:cover;
-  object-position:35% 25%;      /* nudge framing to the left */
+  object-position:38% 22%;      /* nudge framing left & slightly up */
   filter:contrast(1) saturate(1.05);
 }
 .hero-content{position:relative;margin-top:-220px;padding:0 0 2.25rem}
@@ -132,10 +132,11 @@ img{max-width:100%;display:block}
     position:relative;          /* for gradient pseudo-element */
   }
   .hero-bg img{
-    height:460px;               /* taller mobile hero */
+    height:500px;               /* taller mobile hero (was 460px) */
     object-fit:cover;
-    object-position:40% 30%;    /* more to the left on mobile too */
+    object-position:35% 28%;    /* more to the left & a bit higher */
   }
+
   /* move gradient to the image container so it doesn't cover content */
   .hero::after{ content:none; }
   .hero-bg::after{
@@ -151,20 +152,25 @@ img{max-width:100%;display:block}
     grid-area:1 / 1;
     align-self:end;
     justify-self:start;
-    margin:0 0 18px 16px;
+    margin:0 0 22px 16px;       /* a touch more breathing at bottom */
     position:relative;
     z-index:2;                  /* above image + gradient */
     display:block;
-    color:#fff; font-weight:800; text-transform:uppercase; letter-spacing:.02em;
-    font-size:clamp(22px,7vw,34px);
-    text-shadow:0 2px 8px rgba(0,0,0,.35);
+    color:#fff; font-weight:800; text-transform:uppercase; letter-spacing:.015em;
+    font-size:clamp(24px,8vw,40px);   /* bigger overlay */
+    text-shadow:0 3px 10px rgba(0,0,0,.4);
   }
 
   /* rest of hero content stays below image */
   .hero-content{
     grid-area:2 / 1;
     margin-top:0;
-    padding:1rem 0 1.5rem;
+    padding:1rem 0 1.6rem;
   }
-  .hero h1{font-size:1.5rem; line-height:1.25}
+  .hero h1{
+    font-size:clamp(1.7rem,5.5vw,2.25rem); /* larger title below */
+    line-height:1.15;
+    margin-top:.25rem;
+    margin-bottom:.6rem;
+  }
 }
