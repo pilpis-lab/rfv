@@ -135,8 +135,6 @@ img{max-width:100%;display:block}
     height:500px;               /* taller mobile hero (was 460px) */
     object-fit:cover;
     object-position:75% 50%;    /* more to the left & a bit higher */
-    transform: scale(0.9); /* 0.9 = 90% size, zooms out a bit */
-    transform-origin: center center; /* or 35% 28% to keep current focal point */
   }
 
   /* move gradient to the image container so it doesn't cover content */
