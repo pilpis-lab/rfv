@@ -38,7 +38,7 @@ img{max-width:100%;display:block}
   width:100%;
   height:420px;                 /* taller desktop hero */
   object-fit:cover;
-  object-position:100% 100%;      /* nudge framing left & slightly up */
+  object-position:38% 22%;      /* nudge framing left & slightly up */
   filter:contrast(1) saturate(1.05);
 }
 .hero-content{position:relative;margin-top:-220px;padding:0 0 2.25rem}
@@ -134,7 +134,7 @@ img{max-width:100%;display:block}
   .hero-bg img{
     height:500px;               /* taller mobile hero (was 460px) */
     object-fit:cover;
-    object-position:35% 28%;    /* more to the left & a bit higher */
+    object-position:0% 0%;    /* more to the left & a bit higher */
   }
 
   /* move gradient to the image container so it doesn't cover content */
