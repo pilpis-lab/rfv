@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Saia do Aluguel — RFV</title>
   <meta name="description" content="Já pensou em sair do aluguel e conquistar a casa própria? Descubra como a RFV pode te ajudar a financiar seu primeiro imóvel." />
+  <meta name="theme-color" content="#0C5C40" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Preload the hero for faster LCP -->
+  <link rel="preload" as="image" href="images/hero-desktop-1.webp" imagesrcset="images/hero-desktop-1.webp" imagesizes="100vw" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Top slim banner (desktop only) -->
-  <section class="bia-banner">
+  <section class="bia-banner" aria-label="Fale com a BIA">
     <img src="images/header-bia-desktop.jpg" alt="Fale com a BIA — RFV">
   </section>
 
@@ -20,151 +23,149 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#" aria-label="Início">
-        <img
-          src="images/logo.flat.png"
-          alt="RFV"
-          class="logo"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high"
-        />
+        <img src="images/logo.flat.png" alt="RFV" class="logo" loading="eager" decoding="async" fetchpriority="high">
       </a>
 
       <nav class="nav" aria-label="Primária">
-        <a href="#" class="nav-link">Início</a>
+        <a href="#" class="nav-link" aria-current="page">Início</a>
         <a href="#passos" class="nav-link">Passos</a>
         <a href="#faq" class="nav-link">Dúvidas</a>
       </nav>
 
-      <a class="btn cta" href="#">Quero fazer uma simulação</a>
+      <a class="btn cta" href="#" role="button">Quero fazer uma simulação</a>
 
-      <!-- WhatsApp icon (mobile only) -->
-      <a class="wa-icon" href="#" aria-label="WhatsApp">
-        <img src="images/Digital_Glyph_Green.svg" alt="WhatsApp" width="28" height="28">
+      <!-- WhatsApp (mobile only) -->
+      <a class="wa-icon" href="#" aria-label="Abrir WhatsApp">
+        <img src="images/Digital_Glyph_Green.svg" alt="" width="28" height="28" aria-hidden="true">
       </a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg">
-      <img src="images/hero-desktop-1.webp" alt="Família conquistando o primeiro lar" />
-    </div>
-
-    <!-- Mobile overlay title -->
-    <div class="hero-kicker">SAIA DO ALUGUEL</div>
-
-    <div class="container hero-content">
-      <h1>Já pensou em sair do aluguel e conquistar a casa própria?</h1>
-
-      <!-- NEW: illustration right under the H1 (styled via .hero-illus in CSS) -->
-      <img class="hero-illus" src="images/ilustracao1.webp" alt="" loading="lazy" />
-
-      <p class="lead">Se você está na dúvida se vale ou não a pena fazer um financiamento imobiliário para dar adeus ao aluguel, conheça algumas vantagens de investir em algo que será só seu:</p>
-      <ul class="benefits">
-        <li>Construção ou ampliação do seu patrimônio</li>
-        <li>Proteção contra reajustes anuais do aluguel</li>
-        <li>Parcelas mensais que podem ser menores que o seu aluguel</li>
-        <li>Possibilidade de quitar antes do prazo acordado</li>
-        <li>Subsídio do governo e condições facilitadas para o primeiro imóvel</li>
-        <li>Valorização do seu patrimônio ao longo do tempo</li>
-        <li>Utilização do imóvel como fonte de renda (aluguel)</li>
-      </ul>
-      <div class="hero-cta">
-        <a href="#" class="btn primary">Quero sair do aluguel</a>
-        <a href="#" class="btn outline">Quero fazer uma simulação</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Passos -->
-  <section id="passos" class="steps">
-    <div class="container">
-      <h2>Quer sair do aluguel, a <span class="brand-word">RFV</span> te ajuda!</h2>
-      <p class="sub">Siga as dicas abaixo e dê seus próximos passos rumo à grande realização da sua vida:</p>
-
-      <div class="cards">
-        <article class="card">
-          <img src="images/1.webp" alt="" loading="lazy">
-          <h3>Conheça nossos imóveis</h3>
-          <p>Conte com a <strong>BIA</strong>, assistente virtual da RFV, para te apresentar as melhores opções na cidade onde deseja morar.</p>
-        </article>
-
-        <article class="card">
-          <img src="images/2.webp" alt="" loading="lazy">
-          <h3>Faça uma simulação</h3>
-          <p>Realize uma simulação de acordo com seu perfil (idade, cidade de interesse e perfil financeiro).</p>
-        </article>
-
-        <article class="card">
-          <img src="images/3.webp" alt="" loading="lazy">
-          <h3>Conte com um corretor RFV</h3>
-          <p>Tire dúvidas e encontre as melhores condições para realizar sua conquista.</p>
-        </article>
-
-        <article class="card">
-          <img src="images/4.webp" alt="" loading="lazy">
-          <h3>Use seu FGTS</h3>
-          <p>Separe os documentos e complete as informações solicitadas pelo corretor.</p>
-        </article>
-
-        <article class="card">
-          <img src="images/5.webp" alt="" loading="lazy">
-          <h3>Facilidades RFV</h3>
-          <p>Encaminhamos sua documentação para um correspondente bancário, agilizando seu financiamento.</p>
-        </article>
-
-        <article class="card">
-          <img src="images/6.webp" alt="" loading="lazy">
-          <h3>Assine os contratos</h3>
-          <p>Com crédito aprovado* e FGTS liberado, assine os contratos com o banco e a RFV.</p>
-        </article>
+  <main id="conteudo">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg">
+        <picture>
+          <!-- (optional future) <source media="(max-width:560px)" srcset="images/hero-mobile.webp" /> -->
+          <img src="images/hero-desktop-1.webp" alt="Família feliz comemorando a conquista do primeiro lar" fetchpriority="high">
+        </picture>
       </div>
 
-      <div class="after-steps">
-        <img src="images/7.webp" alt="" loading="lazy">
-        <div class="copy">
-          <h3>Agora é só esperar o grande dia!</h3>
-          <p>Parabéns, você acaba de conquistar seu primeiro apê. Acompanhe a evolução da sua obra até a entrega das chaves.</p>
-          <a href="#" class="btn primary">Quero fazer uma simulação</a>
+      <!-- Mobile overlay title -->
+      <div class="hero-kicker">SAIA DO ALUGUEL</div>
+
+      <div class="container hero-content">
+        <h1 id="hero-title">Já pensou em sair do aluguel e conquistar a casa própria?</h1>
+
+        <!-- Mobile-only illustration (decorative) -->
+        <img class="hero-illus" src="images/ilustracao1.webp" alt="" loading="lazy" aria-hidden="true">
+
+        <p class="lead">Se você está na dúvida se vale ou não a pena fazer um financiamento imobiliário para dar adeus ao aluguel, conheça algumas vantagens de investir em algo que será só seu:</p>
+        <ul class="benefits">
+          <li>Construção ou ampliação do seu patrimônio</li>
+          <li>Proteção contra reajustes anuais do aluguel</li>
+          <li>Parcelas mensais que podem ser menores que o seu aluguel</li>
+          <li>Possibilidade de quitar antes do prazo acordado</li>
+          <li>Subsídio do governo e condições facilitadas para o primeiro imóvel</li>
+          <li>Valorização do seu patrimônio ao longo do tempo</li>
+          <li>Utilização do imóvel como fonte de renda (aluguel)</li>
+        </ul>
+        <div class="hero-cta">
+          <a href="#" class="btn primary" role="button">Quero sair do aluguel</a>
+          <a href="#" class="btn outline" role="button">Quero fazer uma simulação</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Composição de renda -->
-  <section class="income">
-    <div class="container income-inner">
-      <div class="income-copy">
-        <h2>Junte sua renda com um familiar ou amigo para sair do aluguel</h2>
-        <p class="sub">A composição de renda é a forma mais fácil para você atingir o valor necessário para financiar o imóvel que tanto sonha.</p>
-        <ul class="checks">
-          <li>Investir em uma entrada maior para facilitar a aprovação</li>
-          <li>Dividir as parcelas e deixar o valor mensal mais acessível</li>
-          <li>Usar mais de um FGTS para amortizar o saldo devedor</li>
-          <li>Escolher um imóvel de maior valor de acordo com a renda combinada</li>
-        </ul>
-        <a href="#" class="btn primary">Quero sair do aluguel</a>
-      </div>
-      <div class="income-art">
-        <img src="images/ilustracao1.webp" alt="" loading="lazy">
-      </div>
-    </div>
-  </section>
+    <!-- Passos -->
+    <section id="passos" class="steps" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 id="steps-title">Quer sair do aluguel, a <span class="brand-word">RFV</span> te ajuda!</h2>
+        <p class="sub">Siga as dicas abaixo e dê seus próximos passos rumo à grande realização da sua vida:</p>
 
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <div class="container">
-      <h2>Dúvidas frequentes</h2>
-      <div class="faq-list">
-        <details>
-          <summary>1. Qual a vantagem de financiar apartamento?</summary>
-          <p>Além da segurança de contar com um imóvel como um bem durável, o financiamento é uma das modalidades que mais proporciona a realização do sonho da casa própria com taxas reduzidas. O financiamento facilita esse caminho.</p>
-        </details>
-        <!-- ... demais detalhes ... -->
+        <div class="cards">
+          <article class="card">
+            <img src="images/1.webp" alt="" loading="lazy" aria-hidden="true">
+            <h3>Conheça nossos imóveis</h3>
+            <p>Conte com a <strong>BIA</strong>, assistente virtual da RFV, para te apresentar as melhores opções na cidade onde deseja morar.</p>
+          </article>
+
+          <article class="card">
+            <img src="images/2.webp" alt="" loading="lazy" aria-hidden="true">
+            <h3>Faça uma simulação</h3>
+            <p>Realize uma simulação de acordo com seu perfil (idade, cidade de interesse e perfil financeiro).</p>
+          </article>
+
+          <article class="card">
+            <img src="images/3.webp" alt="" loading="lazy" aria-hidden="true">
+            <h3>Conte com um corretor RFV</h3>
+            <p>Tire dúvidas e encontre as melhores condições para realizar sua conquista.</p>
+          </article>
+
+          <article class="card">
+            <img src="images/4.webp" alt="" loading="lazy" aria-hidden="true">
+            <h3>Use seu FGTS</h3>
+            <p>Separe os documentos e complete as informações solicitadas pelo corretor.</p>
+          </article>
+
+          <article class="card">
+            <img src="images/5.webp" alt="" loading="lazy" aria-hidden="true">
+            <h3>Facilidades RFV</h3>
+            <p>Encaminhamos sua documentação para um correspondente bancário, agilizando seu financiamento.</p>
+          </article>
+
+          <article class="card">
+            <img src="images/6.webp" alt="" loading="lazy" aria-hidden="true">
+            <h3>Assine os contratos</h3>
+            <p>Com crédito aprovado* e FGTS liberado, assine os contratos com o banco e a RFV.</p>
+          </article>
+        </div>
+
+        <div class="after-steps">
+          <img src="images/7.webp" alt="" loading="lazy" aria-hidden="true">
+          <div class="copy">
+            <h3>Agora é só esperar o grande dia!</h3>
+            <p>Parabéns, você acaba de conquistar seu primeiro apê. Acompanhe a evolução da sua obra até a entrega das chaves.</p>
+            <a href="#" class="btn primary" role="button">Quero fazer uma simulação</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Composição de renda -->
+    <section class="income" aria-labelledby="income-title">
+      <div class="container income-inner">
+        <div class="income-copy">
+          <h2 id="income-title">Junte sua renda com um familiar ou amigo para sair do aluguel</h2>
+          <p class="sub">A composição de renda é a forma mais fácil para você atingir o valor necessário para financiar o imóvel que tanto sonha.</p>
+          <ul class="checks">
+            <li>Investir em uma entrada maior para facilitar a aprovação</li>
+            <li>Dividir as parcelas e deixar o valor mensal mais acessível</li>
+            <li>Usar mais de um FGTS para amortizar o saldo devedor</li>
+            <li>Escolher um imóvel de maior valor de acordo com a renda combinada</li>
+          </ul>
+          <a href="#" class="btn primary" role="button">Quero sair do aluguel</a>
+        </div>
+        <div class="income-art" aria-hidden="true">
+          <img src="images/ilustracao1.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Dúvidas frequentes</h2>
+        <div class="faq-list">
+          <details>
+            <summary>1. Qual a vantagem de financiar apartamento?</summary>
+            <p>Além da segurança de contar com um imóvel como um bem durável, o financiamento é uma das modalidades que mais proporciona a realização do sonho da casa própria com taxas reduzidas. O financiamento facilita esse caminho.</p>
+          </details>
+          <!-- ... demais detalhes ... -->
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -174,6 +175,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
