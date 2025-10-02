@@ -16,6 +16,9 @@ html,body{
 img{ max-width:100%; display:block }
 .container{ width:min(1140px,92vw); margin-inline:auto }
 
+/* Better focus visibility */
+:focus-visible{ outline:3px solid #94d3ac; outline-offset:2px }
+
 /* ========== Buttons ========== */
 .btn{
   display:inline-block;
@@ -102,12 +105,28 @@ img{ max-width:100%; display:block }
 .faq-list summary{ cursor:pointer; font-weight:700; color:var(--green) }
 .faq-list p{ margin:.5rem 0 0; opacity:.9 }
 
-/* ========== Footer ========== */
-.site-footer{ background:#fff; border-top:1px solid #e5e8e8 }
-.footer-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:1rem 0; gap:.75rem; flex-wrap:wrap;
+/* ========== Footer (refreshed) ========== */
+.site-footer{
+  background:var(--green);
+  padding:2rem 0;
+  border-top:none;
+  text-align:center;
 }
+.footer-inner{
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:1rem;
+}
+.site-footer p{ color:#fff; margin:0; font-size:.95rem }
+
+/* WhatsApp button in footer: white on green */
+.site-footer .btn.whatsapp{
+  background:#fff; color:var(--green);
+  padding:1rem 1.6rem;
+  border-radius:14px;
+  font-size:1.05rem;
+}
+.site-footer .btn.whatsapp:hover{ background:#f2f4f4 }
 
 /* ========== Top slim banner (desktop only) ========== */
 .bia-banner{ background:#f8f6f3 }
@@ -178,4 +197,7 @@ img{ max-width:100%; display:block }
   /* cards grid & benefits list */
   .cards{ grid-template-columns:1fr }
   .benefits{ grid-template-columns:1fr }
+
+  /* footer: full-width CTA looks great on mobile */
+  .site-footer .btn.whatsapp{ width:100%; max-width:640px }
 }
