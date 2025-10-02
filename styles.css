@@ -33,19 +33,6 @@ img{ max-width:100%; display:block }
 .btn.cta{ background:var(--green); color:#fff }
 .btn.whatsapp{ background:#25D366; color:#fff }
 
-/* CTA after step 7 styled like footer WhatsApp */
-.steps .after-steps .btn.primary{
-  background:#fff !important;
-  color:var(--green) !important;
-  border:none;
-  border-radius:14px;
-  font-size:1.05rem;
-  padding:1rem 1.6rem;
-  text-align:center;
-  display:inline-block;
-}
-.steps .after-steps .btn.primary:hover{ background:#f2f4f4 !important }
-
 /* ========== Header ========== */
 .site-header{
   position:sticky; top:0; z-index:10;
@@ -77,7 +64,8 @@ img{ max-width:100%; display:block }
   gap:.5rem 2rem; margin:0 0 1rem; padding-left:1rem;
 }
 .hero-cta{ display:flex; gap:.75rem; flex-wrap:wrap }
-.hero-illus{ display:none } /* hidden desktop */
+/* hide the optional illustration by default; shown on mobile */
+.hero-illus{ display:none }
 
 /* ========== Steps (green band) ========== */
 .steps{ padding:2.5rem 0; background:var(--green) }
@@ -117,7 +105,7 @@ img{ max-width:100%; display:block }
 .faq-list summary{ cursor:pointer; font-weight:700; color:var(--green) }
 .faq-list p{ margin:.5rem 0 0; opacity:.9 }
 
-/* ========== Footer ========== */
+/* ========== Footer (refreshed) ========== */
 .site-footer{
   background:var(--green);
   padding:2rem 0;
@@ -130,13 +118,17 @@ img{ max-width:100%; display:block }
   gap:1rem;
 }
 .site-footer p{ color:#fff; margin:0; font-size:.95rem }
+
+/* WhatsApp button in footer: white on green */
 .site-footer .btn.whatsapp{
   background:#fff; color:var(--green);
-  padding:1rem 1.6rem; border-radius:14px; font-size:1.05rem;
+  padding:1rem 1.6rem;
+  border-radius:14px;
+  font-size:1.05rem;
 }
 .site-footer .btn.whatsapp:hover{ background:#f2f4f4 }
 
-/* ========== Top slim banner ========== */
+/* ========== Top slim banner (desktop only) ========== */
 .bia-banner{ background:#f8f6f3 }
 .bia-banner img{ display:block; width:100%; height:129px; object-fit:cover; object-position:center }
 
@@ -151,16 +143,21 @@ img{ max-width:100%; display:block }
 
 /* ========== Mobile ========== */
 @media (max-width:560px){
+  /* header */
   .nav,.cta{ display:none !important }
   .wa-icon{ display:flex; align-items:center; justify-content:center; padding:.25rem; margin-left:auto; -webkit-tap-highlight-color:transparent }
   .logo{ height:48px }
   .site-header{ border-bottom:none }
   .header-inner{ padding:.5rem 0 }
+
+  /* hide desktop banner */
   .bia-banner,.bia-banner img{ display:none !important; height:0 !important; padding:0 !important; margin:0 !important; overflow:hidden !important }
 
+  /* hero: image + overlay row 1, content row 2 */
   .hero{ display:grid }
   .hero-bg{ grid-area:1/1; position:relative }
   .hero-bg img{ height:550px; object-position:80% 28% }
+  .hero::after{ content:none }
   .hero-bg::after{
     content:""; position:absolute; inset:0;
     background:linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.45) 95%);
@@ -169,13 +166,27 @@ img{ max-width:100%; display:block }
   .hero-kicker{
     grid-area:1/1; align-self:end; justify-self:start;
     margin:0 0 22px 16px; position:relative; z-index:2;
-    color:#fff; font-weight:800; text-transform:uppercase; letter-spacing:.015em;
+    display:block; color:#fff; font-weight:800; text-transform:uppercase; letter-spacing:.015em;
     font-size:clamp(24px,8vw,40px); text-shadow:0 3px 10px rgba(0,0,0,.4);
   }
   .hero-content{ grid-area:2/1; margin-top:0; padding:1rem 0 1.6rem }
-  .hero h1{ font-size:clamp(2.05rem,7vw,2.6rem); line-height:1.08; letter-spacing:-0.005em; margin:0 0 .5rem }
-  .hero-illus{ display:block !important; width:min(520px,88vw); margin:.4rem auto 1.1rem }
 
+  /* H1 closer to reference */
+  .hero h1{
+    font-size:clamp(2.05rem,7vw,2.6rem);
+    line-height:1.08;
+    letter-spacing:-0.005em;
+    margin:0 0 .5rem;
+  }
+
+  /* optional illustration under H1 */
+  .hero-illus{
+    display:block !important;
+    width:min(520px,88vw);
+    margin:.4rem auto 1.1rem;
+  }
+
+  /* single CTA after bullets (match reference) */
   .hero-cta .btn.outline{ display:none !important }
   .hero-cta .btn.primary{
     background:var(--green) !important;
@@ -183,8 +194,10 @@ img{ max-width:100%; display:block }
     padding:1.05rem 1.25rem; border-radius:14px; font-size:1.05rem;
   }
 
+  /* cards grid & benefits list */
   .cards{ grid-template-columns:1fr }
   .benefits{ grid-template-columns:1fr }
 
+  /* footer: full-width CTA looks great on mobile */
   .site-footer .btn.whatsapp{ width:100%; max-width:640px }
 }
