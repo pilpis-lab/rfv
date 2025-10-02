@@ -25,37 +25,7 @@
     <img src="images/header-bia-desktop.jpg" alt="Fale com a BIA — RFV">
   </section>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#" aria-label="Início">
-        <img
-          src="images/logo.flat.png"
-          alt="RFV"
-          class="logo"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high">
-      </a>
-
-      <nav class="nav" aria-label="Primária">
-        <a href="#" class="nav-link" aria-current="page">Início</a>
-        <a href="#passos" class="nav-link">Passos</a>
-        <a href="#faq" class="nav-link">Dúvidas</a>
-      </nav>
-
-      <a class="btn cta"
-         href="https://api.whatsapp.com/send/?phone=5561996645777&text=Oi,%20tenho%20interesse%20em%20conhecer%20os%20imóveis%20e%20fazer%20uma%20simulação%20de%20pagamento!"
-         role="button">Quero fazer uma simulação</a>
-
-      <!-- WhatsApp (mobile only; decorative glyph) -->
-      <a class="wa-icon"
-         href="https://api.whatsapp.com/send/?phone=5561996645777&text=Oi,%20tenho%20interesse%20em%20conhecer%20os%20imóveis%20e%20fazer%20uma%20simulação%20de%20pagamento!"
-         aria-label="Abrir WhatsApp">
-        <img src="images/Digital_Glyph_Green.svg" alt="" width="28" height="28" aria-hidden="true">
-      </a>
-    </div>
-  </header>
+  <!-- Header removed on desktop per request -->
 
   <main id="conteudo">
     <!-- Hero -->
@@ -68,11 +38,11 @@
             alt="Família feliz comemorando a conquista do primeiro lar"
             fetchpriority="high">
         </picture>
+        <!-- Only overlay text on the image -->
+        <div class="hero-kicker">SAIA DO ALUGUEL</div>
       </div>
 
-      <!-- Mobile overlay title -->
-      <div class="hero-kicker">SAIA DO ALUGUEL</div>
-
+      <!-- All hero text/CTAs below the image -->
       <div class="container hero-content">
         <h1 id="hero-title">Já pensou em sair do aluguel e conquistar a casa própria?</h1>
 
@@ -92,8 +62,7 @@
         <div class="hero-cta">
           <a href="https://api.whatsapp.com/send/?phone=5561996645777&text=Oi,%20tenho%20interesse%20em%20conhecer%20os%20imóveis%20e%20fazer%20uma%20simulação%20de%20pagamento!"
              class="btn primary" role="button">Quero sair do aluguel</a>
-          <a href="https://api.whatsapp.com/send/?phone=5561996645777&text=Oi,%20tenho%20interesse%20em%20conhecer%20os%20imóveis%20e%20fazer%20uma%20simulação%20de%20pagamento!"
-             class="btn outline" role="button">Quero fazer uma simulação</a>
+          <!-- Removed the outline “Quero fazer uma simulação” button -->
         </div>
       </div>
     </section>
@@ -147,7 +116,7 @@
             <p>Com crédito aprovado* e FGTS liberado, assine os contratos com o banco e a RFV.</p>
           </article>
 
-          <!-- 7 (NOW A CARD LIKE THE OTHERS) -->
+          <!-- 7 -->
           <article class="card">
             <img src="images/7.webp" alt="" loading="lazy" aria-hidden="true">
             <h3>Agora é só esperar o grande dia!</h3>
@@ -155,11 +124,7 @@
           </article>
         </div>
 
-        <!-- Optional CTA banner after the steps (no number) -->
-        <div class="copy" style="margin-top:1.25rem">
-          <a href="https://api.whatsapp.com/send/?phone=5561996645777&text=Oi,%20tenho%20interesse%20em%20conhecer%20os%20imóveis%20e%20fazer%20uma%20simulação%20de%20pagamento!"
-             class="btn primary" role="button">Quero fazer uma simulação</a>
-        </div>
+        <!-- Removed the optional “Quero fazer uma simulação” banner -->
       </div>
     </section>
 
@@ -181,83 +146,75 @@
       </div>
     </section>
 
-<!-- FAQ -->
-<section id="faq" class="faq" aria-labelledby="faq-title">
-  <div class="container">
-    <h2 id="faq-title">Dúvidas frequentes</h2>
-
-    <div class="faq-list">
-      <details>
-        <summary>1. Qual a vantagem de financiar apartamento?</summary>
-        <p>Além da segurança de contar com um imóvel como um bem durável, o financiamento é uma das modalidades de crédito habitacional que mais proporciona a realização do sonho da casa própria com taxa de juros reduzida. A gente sabe como é difícil juntar todo o dinheiro de uma vez, por isso o financiamento facilita esse caminho.</p>
-      </details>
-
-      <details>
-        <summary>2. Dá para comprar apartamento mesmo morando de aluguel?</summary>
-        <p>Dá sim! Com um bom planejamento e disciplina nos gastos, é possível investir nesse sonho. Mas aqui na <strong>RFV</strong> a gente facilita a sua conquista e, com isso, oferecemos condições de parcelamento com valores mensais que podem ser até menores que o seu aluguel.</p>
-      </details>
-
-      <details>
-        <summary>3. Posso utilizar meu FGTS?</summary>
-        <p>Pode sim e inclusive recomendamos! O saldo do FGTS pode ser usado para ajudar na entrada do imóvel ou para abater parcelas do seu financiamento. E o melhor: a cada três anos, você pode usar novamente o saldo da conta ativa. Isso ajuda a reduzir o valor da dívida e a quitar o imóvel mais rápido.</p>
-      </details>
-
-      <details>
-        <summary>4. Posso utilizar o Programa Minha Casa, Minha Vida?</summary>
-        <p>Sim! Se você se encaixar nas regras do programa, pode aproveitar condições facilitadas e ainda contar com um subsídio que pode chegar a <strong>R$ 55 mil</strong>. Hoje, o programa atende famílias com renda a partir de <strong>R$ 2.000/mês</strong>.</p>
-      </details>
-
-      <details>
-        <summary>5. Como saber se tenho direito ao subsídio habitacional?</summary>
-        <p>Você pode ter direito ao subsídio se:</p>
-        <ul>
-          <li>For brasileiro(a) e maior de 18 anos;</li>
-          <li>Tiver renda familiar de até <strong>R$ 4.700</strong>;</li>
-          <li>Morar ou trabalhar na cidade onde quer comprar o imóvel;</li>
-          <li>Não possuir outro imóvel ou financiamento habitacional.</li>
-        </ul>
-        <p>Se a sua renda for entre <strong>R$ 4.700 e R$ 12.000</strong>, embora não esteja apto ao subsídio, o programa ainda oferece juros mais baixos e até 35 anos para financiar imóveis com teto máximo de <strong>R$ 500 mil</strong>.</p>
-      </details>
-
-      <details>
-        <summary>6. Quais documentos devo levar para fazer o financiamento?</summary>
-        <ul>
-          <li>Documento de identificação e CPF;</li>
-          <li>Extrato bancário dos últimos 3 meses da sua movimentação financeira;</li>
-          <li>Cópia dos seus 3 últimos contracheques;</li>
-          <li>Certidão do estado civil;</li>
-          <li>Comprovante de endereço;</li>
-          <li>Declaração do Imposto de Renda (caso você declare);</li>
-          <li>Comprovante de renda (CTPS assinada e completa, quando aplicável);</li>
-          <li>Extrato do FGTS.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>7. Tenho nome com restrição, como posso financiar um apartamento?</summary>
-        <p>Nesse caso, o banco pode financiar uma parte menor do valor do imóvel, o que exige uma entrada um pouco maior. Mas não se preocupe! A <strong>RFV</strong> oferece condições especiais e facilita o parcelamento da entrada. Fale com um corretor para entender as possibilidades e simular seu financiamento.</p>
-      </details>
-
-      <details>
-        <summary>8. Não tenho dinheiro suficiente para dar de entrada, o que fazer?</summary>
-        <p>Além da possibilidade de utilizar seu FGTS para a entrada, você pode contar com o <strong>consórcio bancário</strong>. Use sua carta de crédito e conquiste seu apê com a RFV. O consórcio imobiliário é uma forma planejada — e sem surpresas no fim do mês — de financiar a entrada do seu imóvel.</p>
-      </details>
-    </div>
-  </div>
-</section>
+    <!-- FAQ -->
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Dúvidas frequentes</h2>
+        <div class="faq-list">
+          <details>
+            <summary>1. Qual a vantagem de financiar apartamento?</summary>
+            <p>Além da segurança de contar com um imóvel como um bem durável, o financiamento é uma das modalidades de crédito habitacional que mais proporciona a realização do sonho da casa própria com taxa de juros reduzida. A gente sabe como é difícil juntar todo o dinheiro de uma vez, por isso o financiamento facilita esse caminho.</p>
+          </details>
+          <details>
+            <summary>2. Dá para comprar apartamento mesmo morando de aluguel?</summary>
+            <p>Dá sim! Com um bom planejamento e disciplina nos gastos, é possível investir nesse sonho. Mas aqui na <strong>RFV</strong> a gente facilita a sua conquista e, com isso, oferecemos condições de parcelamento com valores mensais que podem ser até menores que o seu aluguel.</p>
+          </details>
+          <details>
+            <summary>3. Posso utilizar meu FGTS?</summary>
+            <p>Pode sim e inclusive recomendamos! O saldo do FGTS pode ser usado para ajudar na entrada do imóvel ou para abater parcelas do seu financiamento. E o melhor: a cada três anos, você pode usar novamente o saldo da conta ativa. Isso ajuda a reduzir o valor da dívida e a quitar o imóvel mais rápido.</p>
+          </details>
+          <details>
+            <summary>4. Posso utilizar o Programa Minha Casa, Minha Vida?</summary>
+            <p>Sim! Se você se encaixar nas regras do programa, pode aproveitar condições facilitadas e ainda contar com um subsídio que pode chegar a <strong>R$ 55 mil</strong>. Hoje, o programa atende famílias com renda a partir de <strong>R$ 2.000/mês</strong>.</p>
+          </details>
+          <details>
+            <summary>5. Como saber se tenho direito ao subsídio habitacional?</summary>
+            <p>Você pode ter direito ao subsídio se:</p>
+            <ul>
+              <li>For brasileiro(a) e maior de 18 anos;</li>
+              <li>Tiver renda familiar de até <strong>R$ 4.700</strong>;</li>
+              <li>Morar ou trabalhar na cidade onde quer comprar o imóvel;</li>
+              <li>Não possuir outro imóvel ou financiamento habitacional.</li>
+            </ul>
+            <p>Se a sua renda for entre <strong>R$ 4.700 e R$ 12.000</strong>, embora não esteja apto ao subsídio, o programa ainda oferece juros mais baixos e até 35 anos para financiar imóveis com teto máximo de <strong>R$ 500 mil</strong>.</p>
+          </details>
+          <details>
+            <summary>6. Quais documentos devo levar para fazer o financiamento?</summary>
+            <ul>
+              <li>Documento de identificação e CPF;</li>
+              <li>Extrato bancário dos últimos 3 meses da sua movimentação financeira;</li>
+              <li>Cópia dos seus 3 últimos contracheques;</li>
+              <li>Certidão do estado civil;</li>
+              <li>Comprovante de endereço;</li>
+              <li>Declaração do Imposto de Renda (caso você declare);</li>
+              <li>Comprovante de renda (CTPS assinada e completa, quando aplicável);</li>
+              <li>Extrato do FGTS.</li>
+            </ul>
+          </details>
+          <details>
+            <summary>7. Tenho nome com restrição, como posso financiar um apartamento?</summary>
+            <p>Nesse caso, o banco pode financiar uma parte menor do valor do imóvel, o que exige uma entrada um pouco maior. Mas não se preocupe! A <strong>RFV</strong> oferece condições especiais e facilita o parcelamento da entrada. Fale com um corretor para entender as possibilidades e simular seu financiamento.</p>
+          </details>
+          <details>
+            <summary>8. Não tenho dinheiro suficiente para dar de entrada, o que fazer?</summary>
+            <p>Além da possibilidade de utilizar seu FGTS para a entrada, você pode contar com o <strong>consórcio bancário</strong>. Use sua carta de crédito e conquiste seu apê com a RFV. O consórcio imobiliário é uma forma planejada — e sem surpresas no fim do mês — de financiar a entrada do seu imóvel.</p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <a class="btn whatsapp"
-       href="https://api.whatsapp.com/send/?phone=5561996645777&text=Oi,%20tenho%20interesse%20em%20conhecer%20os%20imóveis%20e%20fazer%20uma%20simulação%20de%20pagamento!"
-       target="_blank" rel="noopener">
-      Vamos conversar no WhatsApp?
-    </a>
-    <p>© 2025 RFV. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="btn whatsapp"
+         href="https://api.whatsapp.com/send/?phone=5561996645777&text=Oi,%20tenho%20interesse%20em%20conhecer%20os%20imóveis%20e%20fazer%20uma%20simulação%20de%20pagamento!"
+         target="_blank" rel="noopener">
+        Vamos conversar no WhatsApp?
+      </a>
+      <p>© 2025 RFV. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
   <script src="script.js" defer></script>
 </body>
