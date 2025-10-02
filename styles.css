@@ -159,7 +159,7 @@ img{ max-width:100%; display:block }
 
   /* Kicker 10% from top/left and ~2× size */
   .hero-kicker{
-    top:100%; left:20%; bottom:auto;
+    top:80%; left:15%; bottom:auto;
     font-size:clamp(64px, 6.4vw, 96px);
   }
 }
