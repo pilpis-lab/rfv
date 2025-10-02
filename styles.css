@@ -52,7 +52,7 @@ img{ max-width:100%; display:block }
 .hero{ position:relative; background:var(--bg); overflow:hidden }
 .hero-bg{ position:relative }
 .hero-bg img{
-  width:100%; height:420px;
+  width:100%; height:420px;           /* base height (tablet/desktop fallback) */
   object-fit:cover; object-position:38% 22%;
   filter:contrast(1) saturate(1.05);
 }
@@ -66,7 +66,8 @@ img{ max-width:100%; display:block }
 /* Desktop/tablet: hero content sits BELOW the image */
 .hero-content{ position:relative; margin-top:0; padding:1.25rem 0 2.25rem }
 
-/* Overlay title on image (now enabled for desktop too) */
+/* Overlay title on image (desktop default positioned at bottom-left;
+   mobile & desktop custom rules override below) */
 .hero-kicker{
   position:absolute; left:16px; bottom:16px; z-index:2;
   color:#fff; font-weight:800; text-transform:uppercase; letter-spacing:.015em;
@@ -75,10 +76,13 @@ img{ max-width:100%; display:block }
 
 .hero h1{ font-size:clamp(1.6rem,3.2vw,2.2rem); line-height:1.2; margin:0 0 .6rem }
 .lead{ opacity:.9; margin:0 0 1rem }
+
+/* Single-column bullets (desktop, tablet, mobile) */
 .benefits{
-  display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  display:grid; grid-template-columns:1fr;
   gap:.5rem 2rem; margin:0 0 1rem; padding-left:1rem;
 }
+
 .hero-cta{ display:flex; gap:.75rem; flex-wrap:wrap }
 /* hide the optional illustration by default; shown on mobile */
 .hero-illus{ display:none }
@@ -148,6 +152,18 @@ img{ max-width:100%; display:block }
 .bia-banner{ background:#f8f6f3 }
 .bia-banner img{ display:block; width:100%; height:129px; object-fit:cover; object-position:center }
 
+/* ========== Desktop-only adjustments ========== */
+@media (min-width:961px){
+  /* 25% taller hero */
+  .hero-bg img{ height:525px; }
+
+  /* Kicker 10% from top/left and ~2× size */
+  .hero-kicker{
+    top:10%; left:10%; bottom:auto;
+    font-size:clamp(64px, 6.4vw, 96px);
+  }
+}
+
 /* ========== Tablet ========== */
 @media (max-width:960px){
   .cards{ grid-template-columns:repeat(2,1fr) }
@@ -208,9 +224,8 @@ img{ max-width:100%; display:block }
     padding:1.05rem 1.25rem; border-radius:14px; font-size:1.05rem;
   }
 
-  /* cards grid & benefits list */
+  /* cards grid */
   .cards{ grid-template-columns:1fr }
-  .benefits{ grid-template-columns:1fr }
 
   /* footer: full-width CTA looks great on mobile */
   .site-footer .btn.whatsapp{ width:100%; max-width:640px }
