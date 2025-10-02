@@ -155,11 +155,11 @@ img{ max-width:100%; display:block }
 /* ========== Desktop-only adjustments ========== */
 @media (min-width:961px){
   /* 25% taller hero */
-  .hero-bg img{ height:750px; }
+  .hero-bg img{ height:650px; }
 
   /* Kicker 10% from top/left and ~2× size */
   .hero-kicker{
-    top:0%; left:10%; bottom:auto;
+    top:100%; left:20%; bottom:auto;
     font-size:clamp(64px, 6.4vw, 96px);
   }
 }
