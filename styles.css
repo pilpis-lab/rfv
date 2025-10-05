@@ -192,7 +192,7 @@ img{ max-width:100%; display:block }
   /* hero: image + overlay row 1, content row 2 */
   .hero{ display:grid }
   .hero-bg{ grid-area:1/1 }
-  .hero-bg img{ height:550px; object-position:0% 28% }
+  .hero-bg img{ height:550px; object-position:70% 28% }
   .hero-kicker{
     position:relative; grid-area:1/1;
     align-self:end; justify-self:start;
