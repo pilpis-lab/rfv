@@ -235,5 +235,78 @@ src="https://www.facebook.com/tr?id=1236781135146536&ev=PageView&noscript=1"
   </footer>
 
   <script src="script.js" defer></script>
+
+  <script>
+  (function () {
+    // Guard: only run after fbq exists
+    function fbqSafe() { return typeof fbq === 'function'; }
+
+    // 1) Fire ViewContent for this landing page (important view)
+    function trackLandingView() {
+      if (!fbqSafe()) return;
+      fbq('track', 'ViewContent', {
+        content_name: 'Home - Saia do Aluguel',
+        content_category: 'Landing',
+        content_type: 'page'
+      });
+    }
+
+    // 2) Contact on any WhatsApp click (event delegation)
+    function bindWhatsAppClicks() {
+      document.addEventListener('click', function (e) {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = a.getAttribute('href') || '';
+        if (/^https?:\/\/(api\.)?whatsapp\.com/i.test(href)) {
+          if (fbqSafe()) {
+            fbq('track', 'Contact', {
+              contact_point: 'WhatsApp',
+              content_name: a.textContent.trim() || 'WhatsApp CTA',
+              value: 0
+            });
+          }
+        }
+      }, { capture: true });
+    }
+
+    // 3) ViewContent on “Passos” card clicks (title included)
+    function bindCardClicks() {
+      document.addEventListener('click', function (e) {
+        const card = e.target.closest('.card');
+        if (!card) return;
+        const title = (card.querySelector('h3')?.textContent || '').trim();
+        if (title && fbqSafe()) {
+          fbq('track', 'ViewContent', {
+            content_name: 'Step Card: ' + title,
+            content_category: 'Passos',
+            content_type: 'card'
+          });
+        }
+      }, { capture: true });
+    }
+
+    // 4) ViewContent when a FAQ item is opened
+    function bindFaqOpens() {
+      document.querySelectorAll('.faq-list details').forEach(function (det) {
+        det.addEventListener('toggle', function () {
+          if (!det.open || !fbqSafe()) return;
+          const q = (det.querySelector('summary')?.textContent || '').trim();
+          fbq('track', 'ViewContent', {
+            content_name: 'FAQ: ' + q,
+            content_category: 'FAQ',
+            content_type: 'accordion'
+          });
+        });
+      });
+    }
+
+    // Init
+    trackLandingView();
+    bindWhatsAppClicks();
+    bindCardClicks();
+    bindFaqOpens();
+  })();
+</script>
+  
 </body>
 </html>
